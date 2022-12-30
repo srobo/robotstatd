@@ -10,7 +10,7 @@ pub fn get_mem_usage(sys: &mut System, usercode_pid: u32) -> MemoryInfo {
     sys.refresh_memory();
 
     MemoryInfo {
-        used: sys.used_memory(),
+        used: sys.total_memory() - sys.available_memory(),
         usercode: if usercode_pid == 0 {
             0
         } else {
