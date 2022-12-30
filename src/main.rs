@@ -57,7 +57,7 @@ fn main() {
     }
 
     loop {
-        let msg = Message::new("robotstat", serde_json::to_string(&StatsMessage {
+        let msg = Message::new("robotstat/heartbeat", serde_json::to_string(&StatsMessage {
             cpu_usage: stats::get_cpu_usage(&mut sys),
             memory: stats::get_mem_usage(&mut sys, usercode_pid.load(Ordering::SeqCst)),
         }).unwrap(), 0);
