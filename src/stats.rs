@@ -18,6 +18,7 @@ pub fn get_mem_usage(sys: &mut System, usercode_pid: u32) -> MemoryInfo {
             sys.refresh_process(pid);
             sys.process(pid).unwrap().memory()
         },
+        available: sys.available_memory(),
         total: sys.total_memory(),
     }
 }
