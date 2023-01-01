@@ -1,5 +1,10 @@
 [package]
 name = "robotstatd"
+description = "Publishes system statistics (CPU and memory usage) over MQTT"
+homepage = "https://studentrobotics.org"
+repository = "https://github.com/srobo/robotstatd"
+license = "MIT"
+license-file = "LICENSE"
 version = "0.1.0"
 edition = "2021"
 
